@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $("#verify").click(function () {//wait for button click to happen
         $("#errors").empty();
@@ -26,32 +25,29 @@ $(document).ready(function(){
                 var postname = nameValue;
                 var postpass = passwordValue;
                 $.post('validate.php',{postname:nameValue, postpass:passwordValue},
-                function(data){
+                    function(data){
 
-                   // console.log(postname);
-                   // console.log(postpass);
+                        // console.log(postname);
+                        // console.log(postpass);
 
-                   /** if(data=="1"){
-
+                        /** if(data=="1"){
                         console.log("working");
                     } */
 
-                });
+                    });
 
-              window.location.assign("confirmPage.html")
+                window.location.assign("confirmPage.html")
             }
             else {
                 $("input[name='passwd']").addClass("red");
                 $("input[name='passwd2']").addClass("red");
-                $("#errors").append("passwords must contain one lowercase letter, one upper case letter, one number, and be 8-12 chars");
+                $("#errors").append("passwords must contain one lowercase letter, one upper case letter, one number, and be 8-12 chars",'');
             }
         }
         else {
             $("input[name='passwd']").removeClass("red");
             $("input[name='passwd2']").addClass("red");
-            $("#errors").append("passwords are not the same");
+            $("#errors").append("passwords are not the same",'');
         }
     });
 });
-
-

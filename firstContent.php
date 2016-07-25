@@ -11,10 +11,10 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="loginStyle.css">
     <!-- <script src="firstJavaScript.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="loginVerify.js"></script>
 </head>
 <body>
@@ -26,7 +26,7 @@ $user_name =  $_SESSION["user_name"];
 
 ?>
 
-<h1 id="title" style="margin: 3.25% 0% 3.25% 0%">Generic Park</h1>
+<h1 id="title" style="margin: 3.25% 0 3.25% 0">Generic Park</h1>
 <hr> <!-- line -->
 
 <nav class="navbar navbar-default navbar-static-top">
@@ -43,24 +43,20 @@ $user_name =  $_SESSION["user_name"];
 
 <div class="container-fluid">
     <div class="row">
-        <div id=col1 class="col-md-3" style="background-color: white">Welcome to this website, <?php echo "$user_name";?>!
-        </div>
+        <div id=col1 class="col-md-3" style="background-color: white">Welcome to this website, <?php echo "$user_name";?>!</div>
         <div id=fill class="col-md-1"></div>
-        <div id=col2 class="col-md-8" style="background-color: white;>
-      <div class="container">
-        <h2>Content</h2>
+        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 200px">Content Here</div>
+
+    <div class="row">
+        <div id=footer class="col-md-11" style="background-color: gainsboro">(C) Zeta 2016</div>
+        <div class="col-md-1"></div>
     </div>
 </div>
-</div>
-<div class="row">
-    <div id=footer class="col-md-11" style="background-color: lightgrey">(C) Zeta 2016</div>
-    <div class="col-md-1"></div>
-</div>
-</div>
+
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>

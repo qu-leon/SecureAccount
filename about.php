@@ -11,11 +11,11 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="loginStyle.css">
 </head>
 <body>
-<h1 style="margin: 3.25% 0% 3.25% 0%">About Us</h1>
+<h1 style="margin: 3.25% 0 3.25% 0">About Us</h1>
 
 <hr> <!-- line -->
 
@@ -48,12 +48,12 @@
     <div id=footer class="col-md-11" style="background-color: gainsboro; height: 50px">(C) Zeta 2016</div>
     <div class="col-md-1"></div>
 </div>
-</div>
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
 </body>
 </html>

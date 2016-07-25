@@ -1,11 +1,6 @@
 <?php
 //header('Content-type: text/plain');
-/**
- * Created by IntelliJ IDEA.
- * User: sam
- * Date: 7/24/2016
- * Time: 2:09 AM
- */
+
 
 $name = $_POST['postname'];
 $pass = $_POST['postpass'];
@@ -14,19 +9,19 @@ if($name == "sam"){
     echo "1";
 }
 
-$myfile = fopen("data.txt", "a") or die("Unable to open file!");
-$txt = $name;
+$myfile = fopen("data.txt", "a") or die("Unable to open file!");//open file for writing
+$txt = $name;               //writes username to file
 fwrite($myfile, $txt);
 $txt = "\r\n";
 fwrite($myfile, $txt);
 
-$txt = $pass;
+$txt = $pass;               //writes password to file
 fwrite($myfile, $txt);
 $txt = "\r\n";
 fwrite($myfile, $txt);
 
 
-$txt = "\r\n";
+$txt = "\r\n";              //8 empty lines for future data for each user
 fwrite($myfile, $txt);
 $txt = "\r\n";
 fwrite($myfile, $txt);
@@ -46,4 +41,3 @@ fwrite($myfile, $txt);
 
 fclose($myfile);
 
-?>

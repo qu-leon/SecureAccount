@@ -1,7 +1,3 @@
-/**
- * Created by sam on 7/23/2016.
- */
-
 $(document).ready(function() {
     $("#login").click(function () {//wait for button click to happen
         var name = $("input[name='name']");//values of username
@@ -11,7 +7,11 @@ $(document).ready(function() {
         var nameArray = [];
         var passArray = [];
         var infoArray = [];
-        currentUser = 999;
+        var valid;
+        //currentUser = 999;
+
+
+        //CHECKING AGAINST JSON FILES FOR LOGINS
         /**$.get('Account.json', '', function (data) {//get the json file
             console.log(data);
             var arr = data['AccountInfo'];//take out Quote object from data in the file
@@ -41,9 +41,9 @@ $(document).ready(function() {
             }
         });*/
 
-        var postname = nameValue;
-        var postpass = passwordValue;
-        $.post('loginVerify.php',{postname:nameValue, postpass:passwordValue},
+        var postname = nameValue;//set input value of username
+        var postpass = passwordValue;//set input value of password
+        $.post('loginVerify.php',{postname:nameValue, postpass:passwordValue},//send the values to php file
             function(data){
 
                 console.log(data);
@@ -57,6 +57,6 @@ $(document).ready(function() {
 
             });
 
-
     })
+
 });
