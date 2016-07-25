@@ -37,7 +37,7 @@ $(document).ready(function() {
                 window.location.assign("invalidUser.html")
             }
             else {
-                window.location.assign("firstContent.html")
+                window.location.assign("firstContent.php")
             }
         });*/
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
                     window.location.assign("invalidUser.html")
                 }
                 else {
-                    window.location.assign("firstContent.html")
+                    window.location.assign("firstContent.php")
                 }
 
             });

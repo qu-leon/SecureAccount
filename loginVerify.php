@@ -5,7 +5,7 @@
  * Date: 7/24/2016
  * Time: 12:51 PM
  */
-
+session_start();
 $name = $_POST['postname'];
 $pass = $_POST['postpass'];
 $anArray = [];
@@ -32,8 +32,9 @@ if ($handle) {
         $anArray[9] = fgets($handle);
 
         if(rtrim($anArray[0]) == $name){//if the user name matches a name
-            if(trim($anArray[1]) == $pass) {//if the password matches
+            if(rtrim($anArray[1]) == $pass) {//if the password matches
                 $match = $iterator;
+                $_SESSION["user_name"] = rtrim($anArray[0]);
             }
         }
         $iterator = $iterator + 1;
