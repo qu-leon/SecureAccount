@@ -23,8 +23,22 @@ $(document).ready(function(){
                 //$("#errors").append("Username:" + nameValue + " Password: " + passwordValue);
 
                 //ADD DATA TO FILE HERE
+                var postname = nameValue;
+                var postpass = passwordValue;
+                $.post('validate.php',{postname:nameValue, postpass:passwordValue},
+                function(data){
 
-              // window.location.assign("confirmPage.html")
+                   // console.log(postname);
+                   // console.log(postpass);
+
+                   /** if(data=="1"){
+
+                        console.log("working");
+                    } */
+
+                });
+
+              window.location.assign("confirmPage.html")
             }
             else {
                 $("input[name='passwd']").addClass("red");

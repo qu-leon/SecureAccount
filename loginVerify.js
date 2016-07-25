@@ -12,7 +12,7 @@ $(document).ready(function() {
         var passArray = [];
         var infoArray = [];
         currentUser = 999;
-        $.get('Account.json', '', function (data) {//get the json file
+        /**$.get('Account.json', '', function (data) {//get the json file
             console.log(data);
             var arr = data['AccountInfo'];//take out Quote object from data in the file
             var len = arr.length;//get length number of elements in the quote object
@@ -39,6 +39,24 @@ $(document).ready(function() {
             else {
                 window.location.assign("firstContent.html")
             }
-        });
+        });*/
+
+        var postname = nameValue;
+        var postpass = passwordValue;
+        $.post('loginVerify.php',{postname:nameValue, postpass:passwordValue},
+            function(data){
+
+                console.log(data);
+
+                if(data == 99999) {
+                    window.location.assign("invalidUser.html")
+                }
+                else {
+                    window.location.assign("firstContent.html")
+                }
+
+            });
+
+
     })
 });
