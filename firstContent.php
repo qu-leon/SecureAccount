@@ -23,10 +23,13 @@
 session_start();
 
 $user_name =  $_SESSION["user_name"];
+$phone_number =  $_SESSION["phone_number"];
+$address =  $_SESSION["address"];
+$bio =  $_SESSION["bio"];
 
 ?>
-
-<h1 id="title" style="margin: 3.25% 0 3.25% 0">Generic Park</h1>
+<h1 align="center">Information Application</h1>
+<h1 id="title" style="margin: 3.25% 0 3.25% 0">Home</h1>
 <hr> <!-- line -->
 
 <nav class="navbar navbar-default navbar-static-top">
@@ -45,7 +48,18 @@ $user_name =  $_SESSION["user_name"];
     <div class="row">
         <div id=col1 class="col-md-3" style="background-color: white">Welcome to this website, <?php echo "$user_name";?>!</div>
         <div id=fill class="col-md-1"></div>
-        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 200px">Content Here</div>
+        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 91px">
+            <h3 align="center">Your Information</h3>
+            <br>
+            <h4 align="center">Phone number: </h4>
+            <p align="center"><?php echo "$phone_number";?></p>
+
+            <h4 align="center">Address: </h4>
+            <p align="center"><?php echo "$address";?></p>
+
+            <h4 align="center">Bio: </h4>
+            <p align="center"><?php echo "$bio";?></p>
+        </div>
 
     <div class="row">
         <div id=footer class="col-md-11" style="background-color: gainsboro">(C) Zeta 2016</div>

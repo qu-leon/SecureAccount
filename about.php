@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="loginStyle.css">
 </head>
 <body>
+<h1 align="center">Information Application</h1>
 <h1 style="margin: 3.25% 0 3.25% 0">About Us</h1>
 
 <hr> <!-- line -->
@@ -36,7 +37,7 @@
 
         <div id=col1 class="col-md-3" style="background-color: white">Info about author</div>
         <div id=fill class="col-md-1"></div>
-        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 130px;">
+        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 264px;">
             <p align="center">Vincent DiRienzo, Leon Qu, Samuel Park</p>
             <p align="center">anEmail@email.com</p>
             <p align="center">(808)-123-4567</p>
