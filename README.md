@@ -42,10 +42,27 @@ Information is stored in a session which will be used to suttle information betw
 Version 2.0 - TBC
 
 @update
+This program now saves user data in a database instead of a text file.
+Usernames are now unique.
+Upon successful login users information is displayed on the home page like a mini profile.
+Forms tab was implemented.  Users can now fill out and submit the form to change their information.
+Once user information is updated, the new information is displayed on the home page.
 
 @completed
 
+-Unique user names are now implemented
+
+-Data base is now used instead of a text file
+
+-User information is now displayed/changed/stored using a database and queries
+
 @inprogress
+
+-encryption of data before storing in table?
+
+-admin account with 2 layers of security
+
+-levels of access and user input sanitation
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
