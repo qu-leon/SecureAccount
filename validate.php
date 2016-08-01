@@ -1,43 +1,35 @@
+<html>
+<body>
+
+<!-- Welcome <?php //echo "Hello world"; ?><br> -->
+
 <?php
-//header('Content-type: text/plain');
+require_once('Config.php');
+//Open conenction to out database useing the config file
+$link = f_sqlConnect (DB_USER, DB_PASSWORD, DB_NAME);
 
+//Clean out POST to prevent attacks
+$_POST = f_clean($_POST);
 
+//Retreave the information from POST
 $name = $_POST['postname'];
 $pass = $_POST['postpass'];
 
-if($name == "sam"){
-    echo "1";
+
+
+//insert data into database table
+$sql = "INSERT INTO first (username, password) VALUES ('$name', '$pass')";
+//Error check to make sure that the data was put in
+if (!mysql_query($sql)) {
+    die('Error: ' . mysql_error());
 }
 
-$myfile = fopen("data.txt", "a") or die("Unable to open file!");//open file for writing
-$txt = $name;               //writes username to file
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-
-$txt = $pass;               //writes password to file
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
 
 
-$txt = "\r\n";              //8 empty lines for future data for each user
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
-$txt = "\r\n";
-fwrite($myfile, $txt);
+//echo 'Connection successfully';
+
+?>
 
 
-fclose($myfile);
-
+</body>
+</html>

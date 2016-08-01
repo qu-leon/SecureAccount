@@ -3,6 +3,7 @@ $(document).ready(function(){
         $("#errors").empty();
         $("input[name='passwd2']").removeClass("red");
         $("input[name='passwd']").removeClass("red");
+        $("input[name='name']").removeClass("red");
         var name = $("input[name='name']");
         var password = $("input[name='passwd']");
         var password2 = $("input[name='passwd2']");//grabs the input object whos name is phone_number
@@ -11,32 +12,42 @@ $(document).ready(function(){
         var passwordValue2 = password2.val();
 
         var match = passwordValue.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}/i);
-        console.log(match);
+        console.log(match + " : match value");
 
-        //CHECK FOR USER NAME AVAILABILITY HERE
+        //variables to send to php
+        var postname = nameValue;
+        var postpass = passwordValue;
+
+        var availability = 0;
+
+
 
         if(passwordValue == passwordValue2) {
+
+
             $("input[name='passwd2']").removeClass("red");
             $("input[name='passwd']").removeClass("red");
+            $("input[name='name']").removeClass("red");
             if(match != null) {
-                //$("#errors").append("Username:" + nameValue + " Password: " + passwordValue);
 
-                //ADD DATA TO FILE HERE
-                var postname = nameValue;
-                var postpass = passwordValue;
-                $.post('validate.php',{postname:nameValue, postpass:passwordValue},
+                //CHECK FOR USER NAME AVAILABILITY HERE
+                $.post('unameAvailability.php',{postname:nameValue},
                     function(data){
-
-                        // console.log(postname);
-                        // console.log(postpass);
-
-                        /** if(data=="1"){
-                        console.log("working");
-                    } */
-
+                        console.log(data + " : 0 if available, 1 if taken");
+                        if(data == 0) {
+                            //ADD DATA TO FILE HERE
+                            $.post('validate.php',{postname:nameValue, postpass:passwordValue},
+                                function(data){
+                                });
+                            //window.location.assign("confirmPage.html")
+                        }
+                        else {
+                            $("input[name='name']").addClass("red");
+                            $("#errors").append("user name is already taken",'');
+                        }
                     });
 
-                window.location.assign("confirmPage.html")
+
             }
             else {
                 $("input[name='passwd']").addClass("red");
