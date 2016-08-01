@@ -18,13 +18,12 @@ $(document).ready(function() {
 
                 console.log(data);
 
-                if(data == 99999) {
+                if(data == 0) {
                     window.location.assign("invalidUser.html")
                 }
                 else {
                     window.location.assign("firstContent.php")
                 }
-
             });
 
     })

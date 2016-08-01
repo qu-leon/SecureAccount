@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="loginStyle.css">
 </head>
 <body>
+<h1 align="center">Information Application</h1>
 <h1 style="margin: 3.25% 0 3.25% 0">Forms Page</h1>
 
 <hr> <!-- line -->
@@ -32,10 +33,26 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div id=col1 class="col-md-3" style="background-color: white">Directions and Information here</div>
+        <div id=col1 class="col-md-3" style="background-color: white">On this page you can edit your personal information.</div>
         <div id=fill class="col-md-1"></div>
-        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 200px;">Some form Here</div>
+        <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 20px;">
 
+
+            <form action ="updateInfo.php" method="post">
+                <br>
+                <p style="text-align:center; color:black"> New phone number: <input type="text" name="phonenum"/></p>
+
+                <p style="text-align:center;"> New Address: </p>
+                <p style="text-align:center"><textarea rows="2" cols="50" name="address"/></textarea></p>
+
+                <p style="text-align:center;"> Bio: </p>
+                <p style="text-align:center"><textarea rows="5" cols="50" name="bio"/></textarea></p>
+
+                <p style="text-align:center"><input type="submit" name="submit" id="update" value="Submit"/></p>
+            </form>
+
+
+        </div>
         <div class="row">
             <div id=footer class="col-md-11" style="background-color: gainsboro; height: 50px">(C) Zeta 2016</div>
             <div class="col-md-1"></div>

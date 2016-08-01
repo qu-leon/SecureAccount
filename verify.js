@@ -39,7 +39,7 @@ $(document).ready(function(){
                             $.post('validate.php',{postname:nameValue, postpass:passwordValue},
                                 function(data){
                                 });
-                            //window.location.assign("confirmPage.html")
+                            window.location.assign("confirmPage.html")
                         }
                         else {
                             $("input[name='name']").addClass("red");

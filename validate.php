@@ -1,8 +1,6 @@
 <html>
 <body>
 
-<!-- Welcome <?php //echo "Hello world"; ?><br> -->
-
 <?php
 require_once('Config.php');
 //Open conenction to out database useing the config file
