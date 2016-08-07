@@ -39,7 +39,7 @@
         <div id=fill class="col-md-1"></div>
         <div id=col2 class="col-md-8" style="background-color: white;padding-bottom: 264px;">
             <p align="center">Vincent DiRienzo, Leon Qu, Samuel Park</p>
-            <p align="center">anEmail@email.com</p>
+            <p align="center">aRealEmail491@yahoo.com</p>
             <p align="center">(808)-123-4567</p>
         </div>
     </div>
