@@ -39,7 +39,7 @@ Information is stored in a session which will be used to suttle information betw
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-Version 2.0 - TBC
+Version 2.0 - 7/31/2016
 
 @update
 This program now saves user data in a database instead of a text file.
@@ -66,11 +66,16 @@ Once user information is updated, the new information is displayed on the home p
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-Version 3.0 - TBC
+Version 3.0 - 8/7/2016
 
-@update
+@update 
+Testing Encryption + salting code found online
 
 @completed
 
+-none
+
 @inprogress
+
+-none
 
