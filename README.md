@@ -1,4 +1,4 @@
-# ics491
+# Secure Account (ICS 491)
 Vincent, Leon, Sam
 
 Things needed to run
